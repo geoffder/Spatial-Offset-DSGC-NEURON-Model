@@ -195,7 +195,6 @@ lightXstart = -60  # start location (X axis)of the stimulus bar (um)
 lightXend = 300   # end location (X axis)of the stimulus bar (um)
 lightYstart = -70  # start location (Y axis) of the stimulus bar (um)
 lightYend = 325   # end location (Y axis) of the stimulus bar (um)
-lightReverse = 0  # direction of light sweep (left>right;right<left)
 # -----------------------------------------------------------
 
 # ------------------ DIRECTION PARAMETERS -------------------
@@ -791,15 +790,9 @@ def barOnsets(seedL, _xLocs, _yLocs):
     for syn in range(int(h.nSyn)):
         # distance to synapse divided by speed
         if xMotion:
-            if lightReverse:
-                synT = (lightstart+(lightXend-_xLocs[syn])/speed)
-            else:
-                synT = (lightstart+(_xLocs[syn]-lightXstart)/speed)
+            synT = (lightstart+(_xLocs[syn]-lightXstart)/speed)
         else:  # motion in y
-            if lightReverse:
-                synT = (lightstart+(lightYend-_yLocs[syn])/speed)
-            else:
-                synT = (lightstart+(_yLocs[syn]-lightYstart)/speed)
+            synT = (lightstart+(_yLocs[syn]-lightYstart)/speed)
 
         for i in range(quanta):
             # mean onset time for current synapse
