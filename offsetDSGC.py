@@ -160,11 +160,11 @@ variedWeights = 0  # flags if generateWeights has been used
 
 # ------------ PROBABILITY AND TIMINGS (MANUAL) -------------
 # contrast based probability of release
-cPi = .8
-cPe = .5
-cPamp = .5
-cPn = 0
-# direction scaling factor (1 > dPi*cPi)
+cPi = .8  # inhibition (GABA)
+cPe = .5  # excitation (ACH)
+cPamp = .5  # excitation (AMPA)
+cPn = 0  # excitation (NMDA)
+# direction scaling factor (1, dPi*cPi)
 dPi = 1  # should probably remove this, never used anyway
 
 succLock = 0  # locks success of E to I (cannot occur without I)
