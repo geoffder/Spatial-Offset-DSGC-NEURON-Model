@@ -1334,8 +1334,8 @@ def dirVC():
                         origin, xLocs, yLocs, np.radians(dirLabel[i]))
                 else:
                     dirXlocs, dirYlocs = xLocs, yLocs
-                    iOff = dirIoff[i]
-                    eOff = dirEoff[i]
+                iOff = dirIoff[i]
+                eOff = dirEoff[i]
 
                 if not nonDirectionalPi:
                     cPi = dirPi[i]
