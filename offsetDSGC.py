@@ -1032,7 +1032,7 @@ def dirRun():
         dirIoff.append(prefIoff-(prefIoff-nullIoff)*(
             1.0 - .98/(1.0 + np.exp((dirs[i] - 74.69)/24.36))))
         dirEoff.append(prefEoff-(prefEoff-nullEoff)*(
-            1.0 - .98/(1.0 + np.exp((dirs[i] - 91.0)/25.0))))
+            1.0 - .98/(1.0 + np.exp((dirs[i] - 74.69)/24.36))))
         dirPi.append(prefPi+(nullPi-prefPi)*(
             1.0 - .98/(1.0 + np.exp((dirs[i] - 91.0)/25.0))))
         dirRho.append(prefRho+(nullRho-prefRho)*(
