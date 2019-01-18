@@ -1202,7 +1202,7 @@ def dirRun():
         vmTreeDF = pd.DataFrame(vmTreeRecs, columns=mi)
         vmTreeDF.to_hdf(basest+runLabel+'treeRecData.h5', key='Vm', mode='w')
 
-        iCaTreeRecs = np.array(trialSynRecs).T.reshape(len(synRecs[0]), -1)
+        iCaTreeRecs = np.array(iCaTrialSynRecs).T.reshape(len(synRecs[0]), -1)
         mi = pd.MultiIndex.from_product(
             [np.arange(dirTrials), dirLabel, np.arange(len(synRecs))],
             names=('trials', 'direction', 'synapse'))
